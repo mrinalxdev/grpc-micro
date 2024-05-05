@@ -7,7 +7,7 @@ service UserService {
 
     rpc FindAllUsers (Empty) returns (Users) {}
 
-    rpc FindOneUser (FindOneUserDto) retunrs (User) {}
+    rpc FindOneUser (FindOneUserDto) returns (User) {}
 
     rpc UpdateUser (UpdateUserDto) returns (User) {}
 
