@@ -38,6 +38,7 @@ export interface CreateUserDto {
 }
 
 export interface User {
+  [x: string]: any;
   id: string;
   username: string;
   password: string;
