@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/grpc-micro/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/grpc-micro/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/grpc-micro",
+  "projects": {
+    "grpc-micro": {
+      "type": "application",
+      "root": "apps/grpc-micro",
+      "entryFile": "main",
+      "sourceRoot": "apps/grpc-micro/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/grpc-micro/tsconfig.app.json"
+      }
+    },
+    "auth": {
+      "type": "application",
+      "root": "apps/auth",
+      "entryFile": "main",
+      "sourceRoot": "apps/auth/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
+      }
+    }
+  }
+}
